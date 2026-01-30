@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euphoric Network - Servidor PvP</title>
+    <meta name="description" content="Servidor Euphoric Network - modos HG, Lava, FPS, Timer e muito mais. Veja informações, novidades e acesse a loja oficial.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="logo">
+                <span class="logo-main">Euphoric</span>
+                <span class="logo-sub">Network</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Início</a>
+                <a href="#modes">Modos</a>
+                <a href="#info">Servidor</a>
+                <a href="#store">Loja</a>
+                <a href="#support">Suporte</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>Euphoric Network</h1>
+                    <p class="hero-subtitle">Servidor focado em PvP competitivo, otimizado para 1.8.8 e pensado para jogadores exigentes.</p>
+                    <div class="hero-actions">
+                        <div class="ip-card">
+                            <span class="ip-label">IP do servidor</span>
+                            <span class="ip-value" id="server-ip">play.euphoricmc.com</span>
+                            <button class="btn btn-secondary" id="copy-ip">Copiar IP</button>
+                        </div>
+                        <a href="#store" class="btn btn-primary">Ir para a Loja</a>
+                    </div>
+                    <div class="hero-tags">
+                        <span>HG Custom</span>
+                        <span>Lava Challenge</span>
+                        <span>FPS</span>
+                        <span>Timer</span>
+                        <span>Damager</span>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="hero-card">
+                        <h2>Status Rápido</h2>
+                        <ul>
+                            <li><strong>Versão:</strong> 1.8.8</li>
+                            <li><strong>Latência média:</strong> Baixa</li>
+                            <li><strong>Proteções:</strong> Anti-cheat avançado</li>
+                            <li><strong>Eventos:</strong> Torneios semanais HG</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modes" class="section section-alt">
+            <div class="container">
+                <h2>Modos de Jogo</h2>
+                <p class="section-subtitle">Conheça os principais modos disponíveis no servidor.</p>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <h3>HG (Hardcore Games)</h3>
+                        <p>Duelos em um mapa cheio de cavernas otimizadas para PvP. Kits balanceados, borda customizada e gameplay baseado em estratégia.</p>
+                        <ul class="card-list">
+                            <li>Mapa 300x300 com caves focadas em fight</li>
+                            <li>Eventos diários de HG</li>
+                            <li>Sistema de ranking e estatísticas</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Lava</h3>
+                        <p>Modo clássico de treino com arena de lava, hologramas e NPCs configuráveis direto dentro do servidor.</p>
+                        <ul class="card-list">
+                            <li>Dificuldades: fácil, médio e difícil</li>
+                            <li>Placares e hologramas automáticos</li>
+                            <li>Configuração in-game via comandos</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>FPS / Timer / Damager</h3>
+                        <p>Modos focados em evolução mecânica, troca rápida de sopas e controle de dano.</p>
+                        <ul class="card-list">
+                            <li>FPS: arena otimizada e scoreboard dedicado</li>
+                            <li>Timer: desafios de cocoa, cogumelo e refil</li>
+                            <li>Damager: arenas com níveis de dificuldade</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="section">
+            <div class="container">
+                <h2>Sobre o Servidor</h2>
+                <div class="grid grid-2">
+                    <div>
+                        <p>O Euphoric Network foi construído em cima de uma base totalmente customizada, com foco em estabilidade, desempenho e experiência competitiva.</p>
+                        <p>Todos os sistemas foram pensados para reduzir lag, simplificar a vida do staff e entregar uma jogabilidade consistente para quem quer treinar ou competir.</p>
+                        <ul class="info-list">
+                            <li>✔ Mundo de lobby otimizado, sem mobs e com scoreboard dinâmico</li>
+                            <li>✔ Controle global de clima, fome e spawn de mobs</li>
+                            <li>✔ Integração com PlaceholderAPI</li>
+                            <li>✔ Configurações centralizadas em arquivos YML fáceis de editar</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Links Rápidos</h3>
+                        <ul class="info-links">
+                            <li><span>Discord:</span> <a href="#">discord.gg/euphoric</a></li>
+                            <li><span>Twitter:</span> <a href="#">@EuphoricNetwork</a></li>
+                            <li><span>IP:</span> <code>play.euphoricmc.com</code></li>
+                            <li><span>Versão recomendada:</span> 1.8.8</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="store" class="section section-alt">
+            <div class="container">
+                <h2>Loja do Servidor</h2>
+                <p class="section-subtitle">Apoie o projeto e desbloqueie vantagens exclusivas. Valores e métodos de pagamento podem ser ajustados depois.</p>
+
+                <div class="store-tabs">
+                    <button class="store-tab active" data-target="ranks">Ranks</button>
+                    <button class="store-tab" data-target="kits">Kits HG</button>
+                    <button class="store-tab" data-target="cosmetics">Cosméticos</button>
+                </div>
+
+                <div class="store-content active" id="store-ranks">
+                    <div class="grid grid-3">
+                        <article class="card product-card">
+                            <h3>VIP</h3>
+                            <p>Acesso a comandos básicos, fila prioritária e algumas tags especiais.</p>
+                            <ul class="card-list">
+                                <li>/kit vip em modos específicos</li>
+                                <li>Prefixo colorido no chat</li>
+                                <li>Acesso a áreas VIP no lobby</li>
+                            </ul>
+                            <div class="product-footer">
+                                <span class="price">R$ 19,90</span>
+                                <button class="btn btn-primary btn-block">Comprar</button>
+                            </div>
+                        </article>
+                        <article class="card product-card">
+                            <h3>MVP</h3>
+                            <p>Todos benefícios do VIP + recursos extras para quem joga com frequência.</p>
+                            <ul class="card-list">
+                                <li>Multiplicador de coins</li>
+                                <li>Slots extras em kits e preferências</li>
+                                <li>Partidas beta e eventos fechados</li>
+                            </ul>
+                            <div class="product-footer">
+                                <span class="price">R$ 34,90</span>
+                                <button class="btn btn-primary btn-block">Comprar</button>
+                            </div>
+                        </article>
+                        <article class="card product-card">
+                            <h3>LEGEND</h3>
+                            <p>Plano completo para quem quer apoiar ao máximo o servidor.</p>
+                            <ul class="card-list">
+                                <li>Todos os benefícios anteriores</li>
+                                <li>Tag exclusiva e destaque em eventos</li>
+                                <li>Suporte prioritário</li>
+                            </ul>
+                            <div class="product-footer">
+                                <span class="price">R$ 59,90</span>
+                                <button class="btn btn-primary btn-block">Comprar</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="store-content" id="store-kits">
+                    <div class="grid grid-3">
+                        <article class="card product-card">
+                            <h3>Pacote HG Iniciante</h3>
+                            <p>Seleção de kits básicos para quem está começando no HG.</p>
+                            <ul class="card-list">
+                                <li>3 kits liberados</li>
+                                <li>Cooldown reduzido</li>
+                            </ul>
+                            <div class="product-footer">
+                                <span class="price">R$ 14,90</span>
+                                <button class="btn btn-primary btn-block">Comprar</button>
+                            </div>
+                        </article>
+                        <article class="card product-card">
+                            <h3>Pacote HG Competitivo</h3>
+                            <p>Pacote focado em quem joga campeonatos e eventos.</p>
+                            <ul class="card-list">
+                                <li>5 kits competitivos</li>
+                                <li>Ajustes futuros podem ser configurados no painel</li>
+                            </ul>
+                            <div class="product-footer">
+                                <span class="price">R$ 29,90</span>
+                                <button class="btn btn-primary btn-block">Comprar</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="store-content" id="store-cosmetics">
+                    <div class="grid grid-3">
+                        <article class="card product-card">
+                            <h3>Tags Personalizadas</h3>
+                            <p>Crie sua própria tag e destaque-se no chat.</p>
+                            <ul class="card-list">
+                                <li>Cor e formato configuráveis</li>
+                                <li>Moderado pela staff</li>
+                            </ul>
+                            <div class="product-footer">
+                                <span class="price">R$ 9,90</span>
+                                <button class="btn btn-primary btn-block">Comprar</button>
+                            </div>
+                        </article>
+                        <article class="card product-card">
+                            <h3>Cosméticos de Lobby</h3>
+                            <p>Partículas, trilhas e itens visuais para o lobby.</p>
+                            <div class="product-footer">
+                                <span class="price">Em breve</span>
+                                <button class="btn btn-secondary btn-block" disabled>Em desenvolvimento</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="store-note">
+                    Os valores, benefícios e métodos de pagamento podem ser ajustados depois,
+                    ou integrados com uma API de pagamento (PagSeguro, Pix, etc.).
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="section">
+            <div class="container">
+                <h2>Suporte e Contato</h2>
+                <div class="grid grid-2">
+                    <div>
+                        <p>Precisa de ajuda com compras, dúvidas sobre modos de jogo ou quer sugerir alguma melhoria?</p>
+                        <p>Use um dos canais abaixo ou configure um formulário de contato integrado.</p>
+                        <ul class="info-list">
+                            <li>✔ Tickets de suporte no Discord</li>
+                            <li>✔ Canal exclusivo para compradores da loja</li>
+                            <li>✔ Anúncios e changelog de updates</li>
+                        </ul>
+                    </div>
+                    <form class="contact-form">
+                        <div class="field">
+                            <label for="contact-name">Nome</label>
+                            <input id="contact-name" type="text" placeholder="Seu nick ou nome">
+                        </div>
+                        <div class="field">
+                            <label for="contact-email">Email</label>
+                            <input id="contact-email" type="email" placeholder="para retorno (opcional)">
+                        </div>
+                        <div class="field">
+                            <label for="contact-message">Mensagem</label>
+                            <textarea id="contact-message" rows="3" placeholder="Sua dúvida ou sugestão"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-block">Enviar (placeholder)</button>
+                        <p class="form-note">Este formulário é estático. Depois podemos integrar com backend ou serviço de e-mail.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>© Euphoric Network • Todos os direitos reservados</span>
+            <span>Desenvolvido para a versão 1.8.8 do Minecraft</span>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
