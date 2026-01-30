@@ -32,5 +32,28 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+
+    var statusUrl = "http://localhost:8081/status";
+    var statusSpan = document.getElementById("server-status");
+    var onlineSpan = document.getElementById("online-players");
+    if (statusSpan && onlineSpan && window.fetch) {
+        var updateStatus = function () {
+            fetch(statusUrl).then(function (response) {
+                if (!response.ok) {
+                    throw new Error("status");
+                }
+                return response.json();
+            }).then(function (data) {
+                if (typeof data.online === "boolean" && typeof data.onlinePlayers === "number" && typeof data.maxPlayers === "number") {
+                    statusSpan.textContent = data.online ? "Online" : "Offline";
+                    onlineSpan.textContent = data.onlinePlayers + " / " + data.maxPlayers;
+                }
+            }).catch(function () {
+                statusSpan.textContent = "Offline";
+            });
+        };
+        updateStatus();
+        setInterval(updateStatus, 5000);
+    }
 });
 
