@@ -33,10 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    var statusUrl = "http://sd-br3.blazebr.com:8081/status";
     var statusSpan = document.getElementById("server-status");
     var onlineSpan = document.getElementById("online-players");
-    if (statusSpan && onlineSpan && window.fetch) {
+    var statusUrl = null;
+    if (window.location.protocol === "http:") {
+        statusUrl = "http://sd-br3.blazebr.com:8081/status";
+    }
+    if (statusSpan && onlineSpan && window.fetch && statusUrl) {
         var updateStatus = function () {
             fetch(statusUrl).then(function (response) {
                 if (!response.ok) {
